@@ -70,20 +70,18 @@ Set-Content -Path "$($env:ProgramData)\Microsoft\UpdateOS\UpdateOS.ps1.tag" -Val
 # Start logging
 Start-Transcript "$($env:ProgramData)\Microsoft\UpdateOS\UpdateOS.log"
 
-# Main logic
-$needReboot = $false
-Write-Host "Installing updates with HardReboot = $HardReboot."
-
 # Load module from PowerShell Gallery
 $null = Install-PackageProvider -Name NuGet -Force
 $null = Install-Module PSWindowsUpdate -Force
 Import-Module PSWindowsUpdate
 
 # Install all available updates
-Get-WindowsUpdate -Install -IgnoreUserInput -AcceptAll -IgnoreReboot | Select Title, KB, Result | Format-Table
+Add-WUServiceManager -ServiceID 7971f918-a847-4430-9279-4a52d1efe18d -Confirm:$false | Out-Null
+Get-WindowsUpdate -Install -UpdateType Driver -AcceptAll -IgnoreReboot -ErrorAction SilentlyContinue | Select Title, Result | Format-Table
+Get-WindowsUpdate -Install -IgnoreUserInput -AcceptAll -IgnoreReboot -MicrosoftUpdate -NotCategory 'FeaturePacks' -ErrorAction SilentlyContinue | Select Title, Result | Format-Table
 
-#Get-WindowsUpdate -Install -IgnoreUserInput -AcceptAll -IgnoreReboot
-$needReboot = (Get-WURebootStatus -Silent).RebootRequired
+
+
 Write-Host "Exiting with return code 3010 to indicate a soft reboot is needed."
 Exit 3010
 }
