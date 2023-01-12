@@ -1,43 +1,9 @@
 <#PSScriptInfo
-
-.VERSION 1.4
-
-.GUID 07e4ef9f-8341-4dc4-bc73-fc277eb6b4e6
-
-.AUTHOR Michael Niehaus
-
-.COMPANYNAME Microsoft
-
-.COPYRIGHT
-
-.TAGS Windows AutoPilot Update OS
-
-.LICENSEURI 
-
-.PROJECTURI 
-
-.ICONURI 
-
-.EXTERNALMODULEDEPENDENCIES 
-
-.REQUIREDSCRIPTS 
-
-.EXTERNALSCRIPTDEPENDENCIES 
-
-.RELEASENOTES
-Version 1.4:  Fixed reboot logic.
-Version 1.3:  Force use of Microsoft Update/WU.
-Version 1.2:  Updated to work on ARM64.
-Version 1.1:  Cleaned up output.
-Version 1.0:  Original published version.
-
-#>
-
 <#
 .SYNOPSIS
-Installs the latest Windows 10 quality updates.
+Installs the latest Windows 10 quality updates and drivers.
 .DESCRIPTION
-This script uses the PSWindowsUpdate module to install the latest cumulative update for Windows 10.
+This script uses the PSWindowsUpdate module to install the latest cumulative update for Windows 10 and installs latest drivers.
 .EXAMPLE
 .\UpdateOS.ps1
 #>
@@ -79,8 +45,6 @@ Import-Module PSWindowsUpdate
 Add-WUServiceManager -ServiceID 7971f918-a847-4430-9279-4a52d1efe18d -Confirm:$false | Out-Null
 Get-WindowsUpdate -Install -UpdateType Driver -AcceptAll -IgnoreReboot -ErrorAction SilentlyContinue | Select Title, Result | Format-Table
 Get-WindowsUpdate -Install -IgnoreUserInput -AcceptAll -IgnoreReboot -MicrosoftUpdate -NotCategory 'FeaturePacks' -ErrorAction SilentlyContinue | Select Title, Result | Format-Table
-
-
 
 Write-Host "Exiting with return code 3010 to indicate a soft reboot is needed."
 Exit 3010
