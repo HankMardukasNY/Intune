@@ -15,7 +15,7 @@ $App9 = "BlenderFoundation.Blender"
 #$App = "Microsoft.VCRedist.2013.x64"
 
 
-$Winget = Get-ChildItem -Path (Join-Path -Path (Join-Path -Path $env:ProgramFiles -ChildPath "WindowsApps") -ChildPath "Microsoft.DesktopAppInstaller*_x64*\winget.exe")
+$Winget = Get-ChildItem -Path (Join-Path -Path (Join-Path -Path $env:ProgramFiles -ChildPath "WindowsApps") -ChildPath "Microsoft.DesktopAppInstaller*_x64*\winget.exe") | Select-Object -First 1
 $Upgrade = &$winget upgrade --scope machine --accept-source-agreements | Out-String
 
 if ($Upgrade.Contains($App1)) {
