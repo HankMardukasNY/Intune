@@ -1,3 +1,3 @@
 # Questar Secure Browser
 
-These are different proactive remediations scripts that I'm using in Intune
+This will create a desktop shortcut for all users that targets the Start-Questar.ps1 PowerShell script after installation. This script will kill Edge/Teams processes if they are running and then launch the Questar secure browser
