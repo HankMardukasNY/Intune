@@ -1,22 +1,100 @@
-﻿$App1 = "Microsoft.VisualStudioCode"
-$App2 = "Zoom.Zoom"
-$App3 = "Microsoft.WindowsTerminal"
+﻿#Add ids of updates to run
+$Allowlist = @(
+'Zoom.Zoom',
+'Microsoft.VisualStudio.2019.Enterprise',
+'DominikReichl.KeePass',
+'WiresharkFoundation.Wireshark',
+'VideoLAN.VLC',
+'Audacity.Audacity',
+'Notepad++.Notepad++',
+'BlenderFoundation.Blender',
+'Razer Synapse',
+'Nvidia.GeForceExperience',
+'Microsoft.VisualStudioCode',
+'Zoom.Zoom',
+'Microsoft.WindowsTerminal'
+)
 
-$Upgrade = winget upgrade --scope user --accept-source-agreements | Out-String
+#Add ids of updates to skip
+$Blocklist = @(
+'Microsoft.Teams',
+'Microsoft.Office',
+'Microsoft.VCRedist.2015+.x86',
+'Microsoft.VCRedist.2015+.x64',
+'Microsoft.SQLServer2012NativeClient',
+'Microsoft.VCRedist.2013.x86',
+'Microsoft.VCRedist.2013.x64'
+)
 
-if ($Upgrade.Contains($App1)) {
-	Write-Host "Upgrade available for: $App1"
-	exit 1
+# object to be used basically for view only
+class Software {
+  [string]$Name
+  [string]$Id
+  [string]$Version
+  [string]$AvailableVersion
 }
-elseif ($Upgrade.Contains($App2)) {
-	Write-Host "Upgrade available for: $App2"
-	exit 1
+
+# get the available upgrades
+$upgradeResult = winget upgrade --scope user --accept-source-agreements
+
+# run through the list and get the app data
+$upgrades = @()
+$idStart = -1
+$isStartList = 0
+$upgradeResult | ForEach-Object -Process {
+
+  if ($isStartList -lt 1 -and -not $_.StartsWith("Name") -or $_.StartsWith("---") -or $_.StartsWith("The following packages have an upgrade"))
+  {
+    return
+  }
+
+  if ($_.StartsWith("Name"))
+  {
+    $idStart = $_.toLower().IndexOf("id")
+    $isStartList = 1
+    return
+  }
+
+  if ($_.Length -lt $idStart)
+  {
+    return
+  }
+
+  $Software = [Software]::new()
+  $Software.Name = $_.Substring(0, $idStart-1)
+  $info = $_.Substring($idStart) -split '\s+'
+  $Software.Id = $info[0]
+  $Software.Version = $info[1]
+  $Software.AvailableVersion = $info[2]
+
+  $upgrades += $Software
 }
-elseif ($Upgrade.Contains($App3)) {
-	Write-Host "Upgrade available for: $App3"
-	exit 1
+
+# view the list
+$upgrades | Format-Table
+
+# run through the WinGet list, compare with the Allow/Block lists and execute the upgrade
+$upgrades | ForEach-Object -Process {
+
+  if ($Allowlist -contains $_.Id){
+    Write-Host "Upgrade available for $($_.Id)"
+    $PendingUpdates += "$($_.id) "
+  }
+  elseif ($Blocklist -contains $_.Id) {
+   Write-Host "Skipped upgrade for $($_.id)"
+   return
+  }
+  else{
+   Write-Host "Skipped upgrade for $($_.id)"
+   $SkippedUpdates += "$($_.id) "
+   return
+  }
 }
-else {
-	Write-Host "No Upgrade available"
-	exit 0
+if($PendingUpdates){
+Write-Host "Upgrades pending for $PendingUpdates"
+exit 1
+}
+else{
+Write-Host "No upgrades needed"
+exit 0
 }
