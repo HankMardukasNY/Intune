@@ -1,97 +1,77 @@
-﻿#Add ids of updates to run
+﻿#Add IDs of updates to run
 $Allowlist = @(
-'Zoom.Zoom',
-'Microsoft.VisualStudio.2019.Enterprise',
-'DominikReichl.KeePass',
-'WiresharkFoundation.Wireshark',
-'VideoLAN.VLC',
+'7zip.7zip',
 'Audacity.Audacity',
-'Notepad++.Notepad++',
+'Bitwarden.Bitwarden',
 'BlenderFoundation.Blender',
-'Razer Synapse',
-'Nvidia.GeForceExperience',
+'Cisco.CiscoWebexMeetings',
+'Cisco.WebexTeams',
+'Dell.CommandUpdate.Universal',
+'Dell.DisplayManager',
+'DominikReichl.KeePass',
+'EpicGames.EpicGamesLauncher',
+'Inkscape.Inkscape',
+'JAMSoftware.TreeSize.Free',
+'JetBrains.IntelliJIDEA.Community',
+'Logitech.CameraSettings',
+'Logitech.GHUB',
+'Logitech.LGS',
+'Logitech.LogiTune',
+'Logitech.Options',
+'Logitech.Sync',
+'Logitech.UnifyingSoftware',
+'Microsoft.PowerShell',
+'Microsoft.VisualStudio.2019.Enterprise',
 'Microsoft.VisualStudioCode',
-'Zoom.Zoom',
-'Microsoft.WindowsTerminal'
+'Microsoft.WindowsTerminal',
+'mRemoteNG.mRemoteNG',
+'Notepad++.Notepad++',
+'Nvidia.GeForceExperience',
+'NZXT.CAM',
+'Paessler.PRTGDesktop',
+'PuTTY.PuTTY',
+'SanfordLP.DYMOConnect',
+'SonicPi.SonicPi',
+'TexasInstruments.TI-SmartView.TI-84Plus',
+'Valve.Steam',
+'VideoLAN.VLC',
+'WiresharkFoundation.Wireshark',
+'Zoom.Zoom'
 )
 
-#Add ids of updates to skip
-$Blocklist = @(
-'Microsoft.Teams',
-'Microsoft.Office',
-'Microsoft.VCRedist.2015+.x86',
-'Microsoft.VCRedist.2015+.x64',
-'Microsoft.SQLServer2012NativeClient',
-'Microsoft.VCRedist.2013.x86',
-'Microsoft.VCRedist.2013.x64'
-)
+Function Get-WingetPath
+ {
+    param( 
+    ) 
+    if(([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator"))
+ {
+    $resolveWingetPath = Resolve-Path "C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe"
+    $wingetPath = $ResolveWingetPath[-1].Path
+    $winget= Join-Path -Path $wingetPath -ChildPath "winget.exe"
+ }
+    else
+        {
+            $wingetPath = Get-Command winget.exe -ErrorAction SilentlyContinue
+            $winget = $wingetPath.Source
+    } return $winget
+ }
 
-# object to be used basically for view only
-class Software {
-  [string]$Name
-  [string]$Id
-  [string]$Version
-  [string]$AvailableVersion
-}
+$winget = Get-WingetPath
 
-# get the available upgrades
-$upgradeResult = winget upgrade --scope user --accept-source-agreements
+# Get all available upgrades
+$Upgrade = &$winget upgrade --scope user --accept-source-agreements | Out-String
 
-# run through the list and get the app data
-$upgrades = @()
-$idStart = -1
-$isStartList = 0
-$upgradeResult | ForEach-Object -Process {
+# Run through the WinGet list, compare with the Allow list
+foreach($App in $Allowlist){
 
-  if ($isStartList -lt 1 -and -not $_.StartsWith("Name") -or $_.StartsWith("---") -or $_.StartsWith("The following packages have an upgrade"))
-  {
-    return
-  }
-
-  if ($_.StartsWith("Name"))
-  {
-    $idStart = $_.toLower().IndexOf("id")
-    $isStartList = 1
-    return
-  }
-
-  if ($_.Length -lt $idStart)
-  {
-    return
-  }
-
-  $Software = [Software]::new()
-  $Software.Name = $_.Substring(0, $idStart-1)
-  $info = $_.Substring($idStart) -split '\s+'
-  $Software.Id = $info[0]
-  $Software.Version = $info[1]
-  $Software.AvailableVersion = $info[2]
-
-  $upgrades += $Software
-}
-
-# view the list
-$upgrades | Format-Table
-
-# run through the WinGet list, compare with the Allow/Block lists and execute the upgrade
-$upgrades | ForEach-Object -Process {
-
-  if ($Allowlist -contains $_.Id){
-    Write-Host "Upgrade available for $($_.Id)"
-    $PendingUpdates += "$($_.id) "
-  }
-  elseif ($Blocklist -contains $_.Id) {
-   Write-Host "Skipped upgrade for $($_.id)"
-   return
-  }
-  else{
-   Write-Host "Skipped upgrade for $($_.id)"
-   $SkippedUpdates += "$($_.id) "
-   return
+  if ($Upgrade.Contains($App)){
+    Write-Host "Upgrade available for $App"
+    $PendingUpgrades += "$App "
   }
 }
-if($PendingUpdates){
-Write-Host "Upgrades pending for $PendingUpdates"
+
+if($PendingUpgrades){
+Write-Host "Pending $PendingUpgrades"
 exit 1
 }
 else{
