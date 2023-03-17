@@ -1,15 +1,25 @@
 try {
 
 $cmdPath = "${env:ProgramFiles(x86)}\Common Files\Adobe\OOBE_Enterprise\RemoteUpdateManager\RemoteUpdateManager.exe"
- 
-    if (Test-Path -Path $cmdPath){
+$cmdArgList = @(
+	"--action=list"
+)
+
+if (Test-Path -Path $cmdPath){
         Write-Host "Adobe RUM Found"
-        exit 1
-    }
-    else
-   {
-        Write-Host "Not Found"
-        exit 0
+        $CheckUpdates = & $cmdPath $cmdArgList 2>&1 | Out-String
+            if ($CheckUpdates -match 'No new applicable Updates'){   
+                Write-Host "No updates needed"
+                exit 0
+                }
+            else {
+                Write-Host "Updates available"
+                exit 1
+            }
+}
+else {
+    Write-Host "RUM Not Installed"
+    exit 0
     }   
 }
 catch {

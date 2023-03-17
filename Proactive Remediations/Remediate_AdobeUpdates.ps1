@@ -5,7 +5,7 @@ $cmdArgList = @(
 	"--action=install"
 )
 
-& $cmdPath $cmdArgList
+$CheckUpdates = & $cmdPath $cmdArgList 2>&1 | Out-String
 
     if($LASTEXITCODE -eq 0){
     Write-Host "Adobe Apps Updated"
