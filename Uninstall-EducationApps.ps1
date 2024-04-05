@@ -46,6 +46,6 @@ foreach ($App in $Apps) {
 
 Get-AppxPackage -AllUsers -Name $App| Remove-AppxPackage -ErrorAction SilentlyContinue
 Get-AppxProvisionedPackage -Online | Where-Object DisplayName -like $App | Remove-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue
-Write-Output "Uninstalling $App."
+Write-Output "Uninstalling $App"
 
 }
