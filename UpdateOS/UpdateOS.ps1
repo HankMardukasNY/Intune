@@ -44,7 +44,7 @@ Import-Module PSWindowsUpdate
 # Install all available updates
 Add-WUServiceManager -ServiceID 7971f918-a847-4430-9279-4a52d1efe18d -Confirm:$false | Out-Null
 Get-WindowsUpdate -Install -UpdateType Driver -AcceptAll -IgnoreReboot -ErrorAction SilentlyContinue | Select Title, Result | Format-Table
-Get-WindowsUpdate -Install -IgnoreUserInput -AcceptAll -IgnoreReboot -MicrosoftUpdate -NotCategory 'FeaturePacks' -ErrorAction SilentlyContinue | Select Title, Result | Format-Table
+Get-WindowsUpdate -Install -IgnoreUserInput -AcceptAll -IgnoreReboot -MicrosoftUpdate -NotCategory 'FeaturePacks' -NotTitle 'Preview' -ErrorAction SilentlyContinue | Select Title, Result | Format-Table
 
 Write-Host "Exiting with return code 3010 to indicate a soft reboot is needed."
 Exit 3010
