@@ -1,0 +1,665 @@
+<AppLockerPolicy Version="1">
+  <RuleCollection Type="Appx" EnforcementMode="Enabled">
+    <FilePublisherRule Id="08ce7309-046b-45e3-895e-e7b47d227a62" Name="Publisher-Blender Foundation" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=DE6CCB80-52A6-4246-A609-EA97B7E0D6B3" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="1028b819-3226-42ec-aa18-6dc583cb18a9" Name="Publisher-Microsoft Corporation" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="161a7735-c783-4402-83a0-0f4bd903704f" Name="Publisher-Notepad++" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=%22NOTEPAD++%22, O=%22NOTEPAD++%22, L=SAINT CLOUD, S=ILE-DE-FRANCE" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="19c65b8c-fb11-4302-86d7-cbe9496d1f85" Name="Publisher-Notepad++" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=%22NOTEPAD++%22, O=%22NOTEPAD++%22, L=SAINT CLOUD, S=ILE-DE-FRANCE, C=FR" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="2238aaca-6735-497c-9716-f047e7472006" Name="Publisher-Arduino LLC" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=AA9B1BC6-CE2F-47BE-AE0B-1758826804E2" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="261de881-7758-4bf4-a951-5e47b22aef58" Name="Publisher-Intel" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=EB51A5DA-0E72-4863-82E4-EA21C1F8DFE3" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="29b5c1a5-642b-4cac-ac7f-535da1e2a889" Name="Publisher-Autodesk" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=F6FD12B7-9E18-42B8-BA81-AA4ED127C991" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="2af7b02d-f13a-4ad1-8011-4a40a7fe0316" Name="Block-Xbox" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProductName="Microsoft.GamingApp" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="397a58bb-2256-4607-9ff6-cb410219e638" Name="Publisher-ASUS" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=38BC0208-0916-4E44-909B-E6832F47CDE7" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="404327d0-67dc-4368-b081-c51bd6c07b8a" Name="Publisher-Netflix" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=52120C15-ACFA-47FC-A7E3-4974DBA79445" ProductName="4DF9E0F8.Netflix" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="5d1019aa-e834-4333-ac2f-87b202067f1a" Name="Publisher-Skype" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=SKYPE SOFTWARE SARL, O=MICROSOFT CORPORATION, L=LUXEMBOURG, S=LUXEMBOURG, C=LU" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="6c7f200e-d49a-4ffb-b6a6-97384fa0161c" Name="Block-Skype" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=Skype Software Sarl, O=Microsoft Corporation, L=Luxembourg, S=Luxembourg, C=LU" ProductName="Microsoft.SkypeApp" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="71605e33-f496-4da7-9828-4a5ae046a42d" Name="Publisher-Inkscape" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=70ED269B-C60E-40D4-9366-40C3B9D851E2" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="7d194ecf-608d-486b-80b2-c02ba98c88f6" Name="Publisher-Rivet Networks-Killer Control Center" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=EB742617-4934-4951-8B93-E211D04E5A38" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="7e48a0a7-aeb8-41f4-ba25-b604255173d4" Name="Publisher-Dell Alienware" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=F005DA31-7CE1-4D3E-ABEE-08A4AFF4F592" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="83995975-51e4-44cd-a53b-2603918f68bf" Name="Publisher-Realtek Semiconductor Corp" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=83564403-0B26-46B8-9D84-040F43691D31" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="84010ad0-3b6d-4d0f-8d1e-aadd073c1d49" Name="Publisher-Adobe Inc" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=Adobe Inc., OU=AAM 256, O=Adobe Inc., L=San Jose, S=ca, C=US, SERIALNUMBER=2748129, OID.2.5.4.15=Private Organization, OID.1.3.6.1.4.1.311.60.2.1.2=Delaware, OID.1.3.6.1.4.1.311.60.2.1.3=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="865b4b68-0b40-4fd5-9e60-161b7b1496b9" Name="Publisher-Spotify AB" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=453637B3-4E12-4CDF-B0D3-2A3C863BF6EF" ProductName="SpotifyAB.SpotifyMusic" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="8f66ef4f-db2a-48b1-b912-e223b4a12476" Name="Publisher-Piano Time" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=73A4F619-A81D-41E1-AD2D-37EB39446B22" ProductName="REVELSOFTWARE.PIANOTIME" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="9756159a-009b-4f26-9038-0a755bca9152" Name="Publisher-Apple" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=5BD5593D-A41B-4F89-884E-B4F3E0FBAA75" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="9a4b1e72-f7ae-4393-b16f-1aad881849d6" Name="Publisher-HP" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=ED346674-0FA1-4272-85CE-3187C9C86E26" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="9a6f1779-1d19-4c32-94b9-7e0f4c26f7b9" Name="Publisher-Adobe" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=Adobe Systems Incorporated, OU=Adobe Systems, O=Adobe Systems Incorporated, L=San Jose, S=California, C=US, PostalCode=95110, STREET=345 Park Avenue, SERIALNUMBER=2748129, OID.1.3.6.1.4.1.311.60.2.1.2=Delaware, OID.1.3.6.1.4.1.311.60.2.1.3=US, OID.2.5.4.15*" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="9bc8ab88-224b-48bb-a5f0-36c0ab8d96af" Name="Publisher-MuseScore BVBA" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=DEF3DEFA-A62A-42FA-8D21-69112980101A" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="ace25fca-24bb-48d0-b72f-ea96c0c9df4a" Name="MAGIX.MUSICMAKERJAM, from CN=B3B0A5E1-DA5E-4E14-B5A2-F9586AF23405" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=B3B0A5E1-DA5E-4E14-B5A2-F9586AF23405" ProductName="MAGIX.MUSICMAKERJAM" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="bd9c3879-6448-4afe-aa14-d6159a95ea81" Name="Publisher-NVIDIA Corp." Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=D6816951-877F-493B-B4EE-41AB9419C326" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="c3663f43-0d1a-4a57-919c-d548800345ec" Name="Publisher-Clipchamp" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=33F0F141-36F3-4EC2-A77D-51B53D0BA0E4" ProductName="Clipchamp.Clipchamp" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="c3ad8c25-e1d1-4397-a460-f4095770d91b" Name="Publisher-XBMCFoundation.Kodi signed by XBMC Foundation" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=C62BD90A-CDD8-477F-96C3-B25992247B97" ProductName="XBMCFoundation.Kodi" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="d4d01950-d3f4-4cb6-8b23-1be56efe1194" Name="MicrosoftCorporationII.AzureVirtualDesktopHostApp_8wekyb3d8bbwe" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="MICROSOFT CORPORATION" ProductName="MicrosoftCorporationII.AzureVirtualDesktopHostApp_8wekyb3d8bbwe" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="f2aca456-f6ff-43ef-8f6a-b81a92e72583" Name="Publisher-Microsoft Windows" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="fa93487c-29f9-4357-ae9a-e392e89e8edf" Name="DroneBlocks" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=8F198FAB-71D2-4FC1-A6FA-00367F5E7BF4" ProductName="DRONEBLOCKSLLC.DRONEBLOCKS" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="fb8d99c1-df4f-45d3-8f38-b4d54328b264" Name="Publisher-Adobe Inc." Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="CN=ADOBE INC., OU=ADOBE INC., O=ADOBE INC., L=SAN JOSE, S=CA, C=US, SERIALNUMBER=2748129, OID.2.5.4.15=PRIVATE ORGANIZATION, OID.1.3.6.1.4.1.311.60.2.1.2=DELAWARE, OID.1.3.6.1.4.1.311.60.2.1.3=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+  </RuleCollection>
+  <RuleCollection Type="Dll" EnforcementMode="NotConfigured" />
+  <RuleCollection Type="Exe" EnforcementMode="Enabled">
+    <FilePublisherRule Id="011a8529-8540-47d0-99c6-fffb0a863ce0" Name="Sterling National Bank" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=ONLINE BANKING SOLUTIONS, L=ATLANTA, S=GEORGIA, C=US" ProductName="STERLING SECURE BROWSER" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="09847687-ef1e-4afd-b74d-c4d5e40240b9" Name="Signed by O=PRINTERLOGIC, L=ST. GEORGE, S=UTAH, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=PRINTERLOGIC, L=ST. GEORGE, S=UTAH, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="0c1fa6f0-363f-4d16-846c-d2b015248c6f" Name="Loom Inc" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=LOOM, INC., L=SAN FRANCISCO, S=CA, C=US" ProductName="LOOM" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="0f79e190-f8c7-4f1b-bab9-11ccef38b796" Name="Signed by O=ADOBE INC., L=SAN JOSE, S=CA, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=ADOBE INC., L=SAN JOSE, S=CA, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="19480e16-f1f8-4c96-af63-5f0fc4430aae" Name="Putty Suite" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=SIMON TATHAM, L=CAMBRIDGE, S=CAMBRIDGESHIRE, C=GB" ProductName="PUTTY SUITE" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="1cf30582-51bf-49c3-b0d1-72d035c8c9c6" Name="Signed by O=ZOOM VIDEO COMMUNICATIONS, INC., L=SAN JOSE, S=CALIFORNIA, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=ZOOM VIDEO COMMUNICATIONS, INC., L=SAN JOSE, S=CALIFORNIA, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="1fa5e1fb-3d43-4560-881e-e07acd1135f4" Name="Signed by O=CISCO WEBEX LLC, L=SAN JOSE, S=CALIFORNIA, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=CISCO WEBEX LLC, L=SAN JOSE, S=CALIFORNIA, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="220ee925-66fd-4bb0-846a-1b68fe6e162f" Name="Signed by O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="26cfa6ca-2a64-40ee-9c6c-e92dfdde7aae" Name="Signed by O=RIOT GAMES, INC., L=LOS ANGELES, S=CALIFORNIA, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=RIOT GAMES, INC., L=LOS ANGELES, S=CALIFORNIA, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="4c0993b5-fc14-4d74-b779-4c6f4cf1c3c8" Name="iClicker" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=BEDFORD FREEMAN WORTH PUBLISHING GROUP LLC, L=NEW YORK, S=NEW YORK, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="4ee63228-a9b6-4003-bd18-501ae9494551" Name="Collegeboard MP3" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=EDUCATIONAL TESTING SERVICE, L=PRINCETON, S=NEW JERSEY, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="56b21e58-42d5-4a4b-bab1-bd8e746ebab8" Name="BATTLE.NET UPDATE AGENT" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=BLIZZARD ENTERTAINMENT, INC., L=IRVINE, S=CALIFORNIA, C=US" ProductName="BATTLE.NET UPDATE AGENT" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="5dc569c0-c562-486f-8915-40cae74b279c" Name="Cricut" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=CRICUT, INC., L=SOUTH JORDAN, S=UTAH, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="623e751c-65d3-4bb2-a43a-a166d24c47d6" Name="Signed by O=INTERNET TESTING SYSTEMS, L=BALTIMORE, S=MARYLAND, C=US" Description="Certiport Cloud" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=INTERNET TESTING SYSTEMS, L=BALTIMORE, S=MARYLAND, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="62993719-715c-4e10-b20d-584a0f85f119" Name="Battle Net Agent" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=BLIZZARD ENTERTAINMENT, INC., L=IRVINE, S=CALIFORNIA, C=US" ProductName="BATTLE.NET FILE SWITCHER" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="638193b3-de93-4507-be37-c3dcf8887fbb" Name="AZUL ZULU 17, from O=AZUL SYSTEMS, INC., L=SUNNYVALE, S=CALIFORNIA, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=AZUL SYSTEMS, INC., L=SUNNYVALE, S=CALIFORNIA, C=US" ProductName="AZUL ZULU 17" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="6db36782-fa6c-49a8-9e6e-455c4b4b259f" Name="CMTrace" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="SYSTEM CENTER CONFIGURATION MANAGER" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="6f86bca1-f2c3-4e06-8fbf-ad8bff59bfe8" Name="GoToAssist" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=LOGMEIN, INC., L=BOSTON, S=MASSACHUSETTS, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="8b72a7e9-8764-4a7a-8708-94a4f21e2000" Name="Signed by O=HP INC., L=PALO ALTO, S=CALIFORNIA, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=HP INC., L=PALO ALTO, S=CALIFORNIA, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="8c5a9617-a503-4127-a389-d20c18a14ec5" Name="GRAMMARLY FOR WINDOWS, from O=GRAMMARLY, INC., L=SAN FRANCISCO, S=CALIFORNIA, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=GRAMMARLY, INC., L=SAN FRANCISCO, S=CALIFORNIA, C=US" ProductName="GRAMMARLY FOR WINDOWS" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="927c8db7-8a35-4903-a65d-06977daf0092" Name="Sterling National Bank" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=FISERV, L=ALPHARETTA, S=GEORGIA, C=US" ProductName="STERLING SECURE BROWSER" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="9ebbd5e5-be79-4846-8a41-521701ed8e9e" Name="College Board" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=COLLEGE ENTRANCE EXAMINATION BOARD, L=NEW YORK, S=NEW YORK, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="ac7cbef8-e9f2-414f-a43d-e68c56c58cd7" Name="Signed by O=CISCO SYSTEMS, INC., L=SAN JOSE, S=CALIFORNIA, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=CISCO SYSTEMS, INC., L=SAN JOSE, S=CALIFORNIA, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="bef22a18-6253-41af-a079-ddac2849fbd5" Name="GOOGLE UPDATE, from O=GOOGLE INC, L=MOUNTAIN VIEW, S=CALIFORNIA, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=GOOGLE INC, L=MOUNTAIN VIEW, S=CALIFORNIA, C=US" ProductName="GOOGLE UPDATE" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="bfe6d74e-4805-44e3-b4f2-6bce13643e7b" Name="Signed by O=AUTODESK, INC., L=SAN RAFAEL, S=CALIFORNIA, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=AUTODESK, INC., L=SAN RAFAEL, S=CALIFORNIA, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="c216b284-8adc-445f-9f0f-e69378111cc6" Name="Signed by O=NVIDIA CORPORATION, L=SANTA CLARA, S=CALIFORNIA, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=NVIDIA CORPORATION, L=SANTA CLARA, S=CALIFORNIA, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="df38ab41-c1c2-46bc-9b98-e235c9407e7a" Name="MREMOTENG, from O=DAVID SPARER, L=PRESCOTT, S=WISCONSIN, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=DAVID SPARER, L=PRESCOTT, S=WISCONSIN, C=US" ProductName="MREMOTENG" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="e361de10-b325-4098-947e-2e81646ac7e3" Name="Signed by O=LEXMARK INTERNATIONAL, INC., L=LEXINGTON, S=KENTUCKY, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=LEXMARK INTERNATIONAL, INC., L=LEXINGTON, S=KENTUCKY, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="e890b71f-a3ad-43c3-b640-5a0e290e892b" Name="Signed by O=COLLEGE BOARD, L=NEW YORK, S=NEW YORK, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=COLLEGE BOARD, L=NEW YORK, S=NEW YORK, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="f2e76069-50f9-4d05-afe9-22bc36ce9d3a" Name="WEBSTER SECURE BROWSER, from O=FISERV, INC., L=BROOKFIELD, S=WISCONSIN, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=FISERV, INC., L=BROOKFIELD, S=WISCONSIN, C=US" ProductName="WEBSTER SECURE BROWSER" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="f8d0e3cd-23e5-4265-b2a7-29cbfe64caf1" Name="CITRIX RECEIVER" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=CITRIX SYSTEMS, INC., L=FT. LAUDERDALE, S=FLORIDA, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="fae572f7-2ce1-4b82-b98c-fcb2845b2b8c" Name="Signed by O=LOGITECH INC, L=NEWARK, S=CALIFORNIA, C=US" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=LOGITECH INC, L=NEWARK, S=CALIFORNIA, C=US" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePathRule Id="4d8aa650-c444-4e2a-9cae-70450ba0dcf5" Name="MCS" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\APPDATA\LOCAL\MCS\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="533d7c57-1351-4a54-801f-a6ba5188228f" Name="Mosaic" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\ProgramData\Heartland School Solutions\POS\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="7b9df2ff-9a28-4733-85a7-19100bea1ab0" Name="Intune IME Cache" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\IMECache\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="91bf58a9-fd9a-409b-ad4f-0e74f7925fe1" Name="MSA Client" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\PROGRAMDATA\MCS\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="921cc481-6e17-4653-8f75-050b80acca20" Name="(Default Rule) All files located in the Program Files folder" Description="Allows members of the Everyone group to run applications that are located in the Program Files folder." UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%PROGRAMFILES%\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="a61c8b2c-a319-4cd0-9690-d2177cad7b51" Name="(Default Rule) All files located in the Windows folder" Description="Allows members of the Everyone group to run applications that are located in the Windows folder." UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="d2a2ca0f-babc-411d-a6cd-f8f9e2a3757a" Name="CB AP Chinese and AP Japanese Exam" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\ProgramData\ETS\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="fd686d83-a829-4351-8ff4-27c7de5755d2" Name="(Default Rule) All files" Description="Allows members of the local Administrators group to run all applications." UserOrGroupSid="S-1-5-32-544" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="*" />
+      </Conditions>
+    </FilePathRule>
+    <FileHashRule Id="01cc2141-2f7a-4e9d-9995-a57aae2cbf56" Name="Report(+).exe" Description="New Edge" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0x88EB3A3ECBC7D309AEA2E0F70F9BAAD788708079CB0527D9C130094A5450E89F" SourceFileName="Report(+).exe" SourceFileLength="3355648" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
+    <FileHashRule Id="1883ab4c-6d1c-4602-8b6e-b11e6be4e856" Name="PDF-BatchTools" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0xE4A619EB5EA020335E274E8491E6D06E73A8D00241C23B45ADF425961CD71EBF" SourceFileName="PDF-BatchBooklet.exe" SourceFileLength="14399060" />
+          <FileHash Type="SHA256" Data="0xE7E10F6B7F7C8B224AF68E59D596CFC7C30E22D7FFD6FEAC4FC29A322474DCA9" SourceFileName="PDF-BatchStitch.exe" SourceFileLength="14411403" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
+    <FileHashRule Id="29e37b29-e426-4d8c-85a8-4ed5f6d0a562" Name="FB6LauncherViewer.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0xB9414EC4A109EF5644ED808E6709E80EA6C61FCD330519ADE841F42FA17640BD" SourceFileName="FB6LauncherViewer.exe" SourceFileLength="203776" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
+    <FileHashRule Id="334bda51-0655-4ef7-8ddc-76d3d43ef8b2" Name="Timepiece" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0x94C99CEF2CA9DE334E86FC103DE5B1CB720C7C8402092C988CEF987036EF8E5A" SourceFileName="Setup.exe" SourceFileLength="1743283" />
+          <FileHash Type="SHA256" Data="0xCBA55EC19340D13EFE518DB50D93B990A492AF4392ADFEBD8CC33ACDDF4AC1DF" SourceFileName="clientsetup.exe" SourceFileLength="466944" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
+    <FileHashRule Id="386ae959-bab7-45f1-83c2-152132edf2e7" Name="Ti-89 Calculator" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0xF9E16246A707D1E6D4EF5BE18080B847E7DF9DBE6F7C050B1445B02550290612" SourceFileName="Vti.exe" SourceFileLength="417280" />
+          <FileHash Type="SHA256" Data="0x62B5293DEF2461D69B1F1ACC6B375E470B7AFA489DF71C28DBC7F8DBA43D2BC5" SourceFileName="skin.exe" SourceFileLength="174080" />
+          <FileHash Type="SHA256" Data="0x5F80CDDC0847CD015E41372114D657E6D6D00704F4C03AA1256D0522F19D35D2" SourceFileName="Vti.exe" SourceFileLength="418304" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
+    <FileHashRule Id="38ba4821-6512-4bf4-a651-9cb1d8d2959d" Name="RDWorks" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0xC626270BC7D1D5620670B767EFAB3E528126E13C5B0EA9F00707F708F1916F68" SourceFileName="RDWorksV8.exe" SourceFileLength="2347008" />
+          <FileHash Type="SHA256" Data="0x07A3126498F2045DB2711D6106974F77FA950B9A14DAE28C838179E0BF811998" SourceFileName="RDWorksV8Uninstall.exe" SourceFileLength="24576" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
+    <FileHashRule Id="42531ee5-ffd1-4750-bba4-53d899f475de" Name="Wabbitemu.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0x3091902FB654348F7CC655E5750C6A9BAD40550C9D727B414F7A36ADDB68480A" SourceFileName="Wabbitemu.exe" SourceFileLength="4807168" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
+    <FileHashRule Id="4682a741-2465-4f33-a3ad-e4848ac3ad95" Name="ABAS 3" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0xF0287F6C163F669CED74D6BD177BBB69D1C401A8B7DE2861A4411088E6E501C2" SourceFileName="Abas3.exe" SourceFileLength="1982464" />
+          <FileHash Type="SHA256" Data="0xB9A818CD1D9AB56C96EDB29D59D9FA8B7C870A405BC5359F3B1DC2D4DDED28A6" SourceFileName="Renew.exe" SourceFileLength="3802768" />
+          <FileHash Type="SHA256" Data="0x6E05296221DFE2F17F9818C9052B660564291DF1265851122B0C9D57E6833565" SourceFileName="wkhtmltopdf.exe" SourceFileLength="22802944" />
+          <FileHash Type="SHA256" Data="0x1E0025E7B46B07C936E5C01B8E1E4A096E691466D2FCF890985F457DC15EA418" SourceFileName="Abas3.exe" SourceFileLength="1988608" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
+    <FileHashRule Id="83582c9f-afbd-45d1-853c-9d47cfee6a6c" Name="ThemeSwitcher.exe" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0xB38CA1C59FBADF49E36DF9E38DB55044B8D06A0B46107CC6F7001FD4C27E9377" SourceFileName="ThemeSwitcher.exe" SourceFileLength="244224" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
+    <FileHashRule Id="8e0bf36e-4780-4c64-b45d-54757b47ffdf" Name="Exam View" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0xEC85567F9F65B8F72F3A04B4F5E6301D17CCC385A6C16D51DDA2EAB516DE7859" SourceFileName="Device_Manager_Installer.exe" SourceFileLength="81074100" />
+          <FileHash Type="SHA256" Data="0x871B151DAC3CE8A71A1DDC875EC2E0C69EE0B1995D607E9BB2325117BBF58502" SourceFileName="evimport.exe" SourceFileLength="2953216" />
+          <FileHash Type="SHA256" Data="0xB56596407BEF009C8A3B3489FF09220100782EF34BF79B5165AABA041DFD1486" SourceFileName="evmanage.exe" SourceFileLength="7068160" />
+          <FileHash Type="SHA256" Data="0xB6B7C1B9999CA8C85FD8515B932CFDF02A5D1BB66589F0CEBACAA02509D8693F" SourceFileName="evplay.exe" SourceFileLength="3866112" />
+          <FileHash Type="SHA256" Data="0x12C2EA3FE7120746211719AD3ECAAA491F822780325B3F02E5B031EB317E3F82" SourceFileName="evpro.exe" SourceFileLength="9317376" />
+          <FileHash Type="SHA256" Data="0x0DDE10121F58963F7E5BCC36956BB45AC027BB945ADCACC38B56C856DBECB47D" SourceFileName="setacl.exe" SourceFileLength="163840" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
+    <FileHashRule Id="cb82c96f-9664-492c-b322-78318e8b7fe3" Name="Edge" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0xC5A04422CEB60A12151AF355712EBABA21F2FFC3E18CA291AEA5863422AFDC55" SourceFileName="DatabaseUpdater.exe" SourceFileLength="40960" />
+          <FileHash Type="SHA256" Data="0x985C4D4ABE8BB45B4937D439A31931DCE4CF72DB281037812DD046B424D4FF02" SourceFileName="Edge.exe" SourceFileLength="663040" />
+          <FileHash Type="SHA256" Data="0xF9289BE5E14A0C3882DF2E733F3566442FF21BB2B5E1D24E2E9431D94A059F7D" SourceFileName="EDGESystemUpdater.exe" SourceFileLength="57344" />
+          <FileHash Type="SHA256" Data="0xFCDE9518A8A9C10BC7BE9AA5F7F422E6A973AFE1517FD8A6593470B41BEDDC4A" SourceFileName="EXCEL.EXE" SourceFileLength="10342912" />
+          <FileHash Type="SHA256" Data="0xF39D5233809D468FE444CF2CC81A1967AF3D4EFCF9FB3A0D96E32204C8FAF93B" SourceFileName="vfpoledb.exe" SourceFileLength="2627544" />
+          <FileHash Type="SHA256" Data="0x27D2C5D35BE5ABBF0057245FFAAFDA73870F1ECB87762F527CC9E879D410BC05" SourceFileName="Edge.exe" SourceFileLength="684032" />
+          <FileHash Type="SHA256" Data="0x8A39E5D4FC072A9318B39D74C66913EE1D5E20B4E9C0CA369AE9D46E5063D076" SourceFileName="Edge.exe" SourceFileLength="750080" />
+          <FileHash Type="SHA256" Data="0x71255F6E91A51466809E848D976C2EA1E7B3AEBC5341B83431469ABB91C7BE3C" SourceFileName="Edge.exe" SourceFileLength="663040" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
+    <FileHashRule Id="cc244c7e-0d52-4b41-b314-7149567b4eb2" Name="PTLITE10.EXE" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0x95199A1DF83D6B58F2881ECEB25CFB214A61BC9E06564F330557829A40D03835" SourceFileName="PTLITE10.EXE" SourceFileLength="707072" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
+    <FileHashRule Id="f6763b09-2f92-4eee-8599-7000acca7748" Name="StandOut" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0x111F0C9D301858B3E80266C2D3E2119793472147B5976C59018FDC8C4766787A" SourceFileName="1-StandOut2_v3.exe" SourceFileLength="56300032" />
+          <FileHash Type="SHA256" Data="0xD47ED5A09432DB415FEF6076CB3D9EAAD80C3981C76AD0F288A2C8EDE778C6AA" SourceFileName="1-StandOut2_v3.exe" SourceFileLength="80683520" />
+          <FileHash Type="SHA256" Data="0x6D2BACA6265E7A0F31D454ABE6F154FFFA98FA279241EFA14F7498E8588F9E35" SourceFileName="1-StandOut1_v3.exe" SourceFileLength="80683520" />
+          <FileHash Type="SHA256" Data="0x29161E7180833F93A771B2A7AF6E322D651A2328810CA5ACBD55322E81CB37AF" SourceFileName="1-StandOut3_v3.exe" SourceFileLength="80736256" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
+    <FilePublisherRule Id="cf80cd48-39b8-4f1a-bb14-fbd23c3464fc" Name="REMOTE DESKTOP MANAGER, from O=DEVOLUTIONS INC, L=LAVALTRIE, S=QUEBEC, C=CA" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=DEVOLUTIONS INC, L=LAVALTRIE, S=QUEBEC, C=CA" ProductName="REMOTE DESKTOP MANAGER" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+  </RuleCollection>
+  <RuleCollection Type="Msi" EnforcementMode="Enabled">
+    <FilePublisherRule Id="81005313-1e45-4ee3-b943-5c002d64ba44" Name="Signed by O=DRAKE MEDIA INC, L=CIUDAD DE PANAMÁ, S=PANAMÁ, C=PA" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=DRAKE MEDIA INC, L=CIUDAD DE PANAMÁ, S=PANAMÁ, C=PA" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="b7af7102-efde-4369-8a89-7a6a392d1473" Name="(Default Rule) All digitally signed Windows Installer files" Description="Allows members of the Everyone group to run digitally signed Windows Installer files." UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="*" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="0.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePathRule Id="5b290184-345a-4453-b184-45305f6d9a54" Name="(Default Rule) All Windows Installer files in %systemdrive%\Windows\Installer" Description="Allows members of the Everyone group to run all Windows Installer files located in %systemdrive%\Windows\Installer." UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\Installer\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="64ad46ff-0d71-4fa0-a30b-3f3d30c5433d" Name="(Default Rule) All Windows Installer files" Description="Allows members of the local Administrators group to run all Windows Installer files." UserOrGroupSid="S-1-5-32-544" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="*.*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="9e0df3cf-6410-4866-aafe-dc33acb18c86" Name="Intune IME Cache" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\IMECache\*" />
+      </Conditions>
+    </FilePathRule>
+    <FileHashRule Id="e5bf27a2-359f-4d8e-8236-dce418d2461a" Name="Timepiece MSI" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FileHashCondition>
+          <FileHash Type="SHA256" Data="0x3391E5C6E9DDE8547F6314DFD44C416DB581747892B13D91DE29DE52030FE854" SourceFileName="setup.msi" SourceFileLength="29512704" />
+          <FileHash Type="SHA256" Data="0x9C09BF4457ED7F2E1BDD77371FC56DC5778D04A6E224838A1A5EFCF4992CB9F8" SourceFileName="setup.msi" SourceFileLength="31104000" />
+        </FileHashCondition>
+      </Conditions>
+    </FileHashRule>
+  </RuleCollection>
+  <RuleCollection Type="Script" EnforcementMode="Enabled">
+    <FilePathRule Id="06dce67b-934c-454f-a263-2515c8796a5d" Name="(Default Rule) All scripts located in the Program Files folder" Description="Allows members of the Everyone group to run scripts that are located in the Program Files folder." UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%PROGRAMFILES%\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="9428c672-5fc3-47f4-808a-a0011f36dd2c" Name="(Default Rule) All scripts located in the Windows folder" Description="Allows members of the Everyone group to run scripts that are located in the Windows folder." UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="ed97d0cb-15ff-430f-b82c-8d7832957725" Name="(Default Rule) All scripts" Description="Allows members of the local Administrators group to run all scripts." UserOrGroupSid="S-1-5-32-544" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="*" />
+      </Conditions>
+    </FilePathRule>
+  </RuleCollection>
+</AppLockerPolicy>
