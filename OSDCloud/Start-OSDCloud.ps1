@@ -33,8 +33,16 @@ $Global:MyOSDCloud = [ordered]@{
     BrandName = 'Valley Stream Central High School District'
 }
 
+#Set BIOS Settings
+$Manufacturer = (Get-MyComputerManufacturer -Brief)
+if ($Manufacturer -match 'Dell|Alienware') {
+    Write-Host "Manufacturer is $Manufacturer, setting BIOS settings" -ForegroundColor Green
+    Invoke-WebPSScript 'https://raw.githubusercontent.com/HankMardukasNY/Intune/refs/heads/main/OSDCloud/Manage-DellBiosSettings.ps1'
+}
+if ($Manufacturer -match 'HP|Hewlett') {
+    Write-Host "Manufacturer is $Manufacturer, setting BIOS settings" -ForegroundColor Green
+    Invoke-WebPSScript 'https://raw.githubusercontent.com/HankMardukasNY/Intune/refs/heads/main/OSDCloud/Manage-HPBiosSettings.ps1'
+}
 #Launch OSDCloud
-Write-Host "Starting OSDCloud" -ForegroundColor Green
-write-host "Start-OSDCloud -OSName $OSName -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage"
-
+Write-Host "Starting OSDCloud -OSName $OSName -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage" -ForegroundColor Green
 Start-OSDCloud -OSName $OSName -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage
