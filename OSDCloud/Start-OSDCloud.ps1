@@ -28,7 +28,6 @@ $Global:MyOSDCloud = [ordered]@{
     updateFirmware = [bool]$true
     updateNetworkDrivers = [bool]$true
     updateSCSIDrivers = [bool]$true
-    SyncMSUpCatDriverUSB = [bool]$true
     OSNames = @('Windows 11 25H2 x64', 'Windows 11 24H2 x64')
     OSVersionNames = @('Windows 11')
     BrandName = 'Valley Stream Central High School District'
