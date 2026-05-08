@@ -1,1 +1,0 @@
-StartOSDCloud -OSName 'Windows 11 25H2 x64' -OSLanguage en-us -OSEdition Pro -OSActivation Retail -Firmware -Restart
