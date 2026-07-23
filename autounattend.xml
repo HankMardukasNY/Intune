@@ -99,5 +99,5 @@
             </RunSynchronous>
         </component>
     </settings>
-    <cpi:offlineImage cpi:source="wim:c:/users/speranzs/downloads/install-5-windows-10-pro.wim#Windows 10 Pro" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
+    <cpi:offlineImage cpi:source="wim:c:/users/user/downloads/install-5-windows-10-pro.wim#Windows 10 Pro" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
 </unattend>
