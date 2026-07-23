@@ -89,6 +89,15 @@
         <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <TimeZone>Eastern Standard Time</TimeZone>
         </component>
+        <component name="Microsoft-Windows-Deployment" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <RunSynchronous>
+                <RunSynchronousCommand wcm:action="add">
+                    <Description>1</Description>
+                    <Order>1</Order>
+                    <Path>cmd.exe /Q /C For /F %G In (&apos;mountvol.exe ^^^| findstr.exe [D-Z]:\\&apos;) Do If Exist &quot;%GWifi.xml&quot; netsh.exe WLAN Add Profile Filename=&quot;%~dG\Wifi.xml&quot;</Path>
+                </RunSynchronousCommand>
+            </RunSynchronous>
+        </component>
     </settings>
-    <cpi:offlineImage cpi:source="wim:c:/users/user/desktop/new%20folder/sources/install.wim#Windows 10 Pro" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
+    <cpi:offlineImage cpi:source="wim:c:/users/speranzs/downloads/install-5-windows-10-pro.wim#Windows 10 Pro" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
 </unattend>
